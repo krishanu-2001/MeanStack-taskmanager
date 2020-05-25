@@ -16,6 +16,7 @@ team - BothEnds
   
       cd project
       cd contactlist
+      npm install
       node index.js
         
         
