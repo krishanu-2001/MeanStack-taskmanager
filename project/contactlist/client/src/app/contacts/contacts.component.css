@@ -1,0 +1,83 @@
+
+.divbase{
+    position: absolute;
+    background-color: #001122;
+    height: 100%;
+    width: 100%;
+}
+
+.head_one{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+.head_two{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+.divbody_one{
+    position: relative;
+    background-color: #112233;
+    color: white;
+    float: left;
+    height: 100%;
+}
+
+.divbody_two{
+    position: relative;
+    color: white;
+    background-color: rgb(56, 13, 54);
+    float: left;
+    height: 100%;
+}
+
+.divheading{
+    font-size: 2em;
+    background-color: #001122;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.divleftpanel{
+    position: relative;
+    padding: 0.5em;
+}
+
+.divtitletab{
+    background-color: mediumslateblue;
+    padding: 1em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.scroller{
+    overflow: auto;
+}
+
+.addtask{
+    color: white;
+    padding: 10px;
+}
+.addspan{
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    padding-right: 30px;
+}
+
+.kid{
+    font-family: 'Times New Roman', Times, serif;
+    padding-right: 20px;
+}
+
+.addsub{
+    float: left;
+    padding-left: 0px;
+
+}
