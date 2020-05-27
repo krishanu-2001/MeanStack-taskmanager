@@ -49,11 +49,19 @@
     padding: 0.5em;
 }
 
+.bbt{
+    margin-bottom: 10px;
+}
+
 .divtitletab{
     background-color: mediumslateblue;
     padding: 1em;
     margin-bottom: 0.5em;
     text-align: center;
+}
+
+.divtitletab:active{
+    border: 2px solid lightblue;
 }
 
 .scroller{
@@ -80,4 +88,27 @@
     float: left;
     padding-left: 0px;
 
+}
+
+.left_title{
+    width: 100%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+}
+
+.left_detail{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    margin-left: 20%;
+}
+
+.left_phone{
+    color: black;
+    max-width: 5em;
+    margin-top: 2em;
+    margin-left: 30%;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
 }

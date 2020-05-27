@@ -7,7 +7,6 @@ import { ContactsComponent } from './contacts/contacts.component';
 import {HttpModule} from '@angular/http';
 import {HttpClientModule} from '@angular/common/http';
 
-
 @NgModule({
   declarations: [
     AppComponent,

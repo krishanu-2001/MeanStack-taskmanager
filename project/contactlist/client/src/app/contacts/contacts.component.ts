@@ -14,15 +14,20 @@ export class ContactsComponent implements OnInit {
   first_name: string;
   last_name: string;
   phone:string;
+  curid:string;
+  date1: Date = new Date();
+  time: Date = new Date();
 
   constructor(private contactService: ContactService) { }
 
   addContact()
   {
+    this.phone = this.date1.toString() + " " + this.time.toString();
     const newContact = {
       first_name: this.first_name,
       last_name: this.last_name,
       phone: this.phone,
+
     };
     this.contactService.addContact(newContact)
         .subscribe(contact=>{
@@ -47,6 +52,16 @@ export class ContactsComponent implements OnInit {
                   }
                 }
             });
+  }
+
+  setcurid(id:any)
+  {
+    this.curid = id;
+  }
+
+  getcurid()
+  {
+    return this.curid;
   }
 
   ngOnInit(){
