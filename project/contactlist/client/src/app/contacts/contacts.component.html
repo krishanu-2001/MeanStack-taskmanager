@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+-->
 <script src="newcontactjs.js"></script>
 <div class = "divbase">
     <div>
@@ -15,7 +16,10 @@
 	    
     <div class = "container addtask">
 	<div class="kid addsub">
-					Add Task
+					<svg style="height: 50px; width:60px;">
+                        <circle cx="31" cy="25" r="23" stroke="blue" stroke-width="3" fill="blue" />
+                        <text x="13" y="30" stroke="#ffffff" stroke-width="1.5">TASK</text>
+                    </svg>
 				</div>
     	        
             <form (submit) = "addContact()">
@@ -26,7 +30,7 @@
                     <input type="text" [(ngModel)] = "last_name" name = "last_name" class = "form1 datain" placeholder="     Description" >        
                 </div>
                 <div class="kid addsub">
-                        <input type="date" [(ngModel)] = "date1" name = "phone" class = "form1 datain" placeholder="date" required> 
+                        <input type="date" [(ngModel)] = "date1" name = "phone" class = "form1 datain" placeholder="dd-mm-yyyy" required> 
                      &ensp;					
 					<input type="time" [(ngModel)] = "time" name = "phone" class = "form1  datain" placeholder="time">        
 
