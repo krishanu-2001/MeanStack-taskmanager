@@ -4,40 +4,52 @@
 <div class = "divbase">
     <div>
         <div class = "head_one col-sm-3">
-            <p class = "divheading">To Do</p>
+            
         </div>
-        <div class = "head_two col-sm-9">
-            <p class = "divheading">Task Details</p>
-        </div>
+        <div >
+			<p class = "divheading">
+			To Do Application<br>Task details</p>
+            </div>
     </div>
+	
+	    
     <div class = "container addtask">
+	<div class="kid addsub">
+					Add Task
+				</div>
+    	        
             <form (submit) = "addContact()">
-                <span class="addspan">ADD</span>
-                <div class="kid addsub">
-                        <input type="text" [(ngModel)] = "first_name" name = "first_name" class = "form1" placeholder="title">        
+				<div class="kid addsub">
+				        <input type="text" [(ngModel)] = "first_name" name = "first_name" class = "form1 datain" placeholder="     Title">        
                 </div>
                 <div class="kid addsub">
-                    <input type="text" [(ngModel)] = "last_name" name = "last_name" class = "form1" placeholder="description">        
+                    <input type="text" [(ngModel)] = "last_name" name = "last_name" class = "form1 datain" placeholder="     Description" >        
                 </div>
                 <div class="kid addsub">
-                        <input type="date" [(ngModel)] = "date1" name = "phone" class = "form1" placeholder="date" required>      
-                        <input type="time" [(ngModel)] = "time" name = "phone" class = "form1" placeholder="time">        
+                        <input type="date" [(ngModel)] = "date1" name = "phone" class = "form1 datain" placeholder="date" required> 
+                     &ensp;					
+					<input type="time" [(ngModel)] = "time" name = "phone" class = "form1  datain" placeholder="time">        
 
                 </div>
                 <div class="kid">
-                    <input type = "submit" class="" value="Add">
+                    <input type = "submit" class="add" value="Add">
                 </div>
             </form> 
+		
         </div>
+	
     <div class = "divbody_one col-sm-3 scroller">
         <div class = "divleftpanel">
             <div *ngFor = "let contact of contacts" class="bbt">
+				<br>
                 <div class = "divtitletab" (click) = "setcurid(contact._id)">
                     {{contact.first_name}}
                 </div>
+				
                 <div>
                     <input class="deletebutton" type="button" (click) = "deleteContact(contact._id)" value="Delete" class = "divdelete">
                 </div>
+				<br>
             </div>
         </div>
     </div>
