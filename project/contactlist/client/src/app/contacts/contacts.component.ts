@@ -17,12 +17,13 @@ export class ContactsComponent implements OnInit {
   curid:string;
   date1: Date = new Date();
   time: Date = new Date();
+  label: string;
 
   constructor(private contactService: ContactService) { }
 
-  addContact()
+   addContact()
   {
-    this.phone = this.date1.toString() + " " + this.time.toString();
+    this.phone = this.date1.toString() + " " + this.time.toString() + " " + this.label;
     const newContact = {
       first_name: this.first_name,
       last_name: this.last_name,
