@@ -1,9 +1,10 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+-->
 <script src="newcontactjs.js"></script>
 <div class = "divbase">
     <div>
-        <div class = "head_one col-sm-3">
+        <div class = "head_one col-md-3">
             
         </div>
         <div >
@@ -15,7 +16,10 @@
 	    
     <div class = "container addtask">
 	<div class="kid addsub">
-					Add Task
+					<svg style="height: 50px; width:60px;">
+                        <circle cx="31" cy="25" r="23" stroke="blue" stroke-width="3" fill="blue" />
+                        <text x="13" y="30" stroke="#ffffff" stroke-width="1.5">TASK</text>
+                    </svg>
 				</div>
     	        
             <form (submit) = "addContact()">
@@ -26,10 +30,20 @@
                     <input type="text" [(ngModel)] = "last_name" name = "last_name" class = "form1 datain" placeholder="     Description" >        
                 </div>
                 <div class="kid addsub">
-                        <input type="date" [(ngModel)] = "date1" name = "phone" class = "form1 datain" placeholder="date" required> 
+                        <input type="date" [(ngModel)] = "date1" name = "phone" class = "form1 datain" placeholder="dd-mm-yyyy" required> 
                      &ensp;					
 					<input type="time" [(ngModel)] = "time" name = "phone" class = "form1  datain" placeholder="time">        
 
+                </div>
+                <div class="kid addsub">
+                    <select id="label" name="label" class="tags_form" [(ngModel)] = "label">
+                        <option value="personal" >personal</option>
+                        <option value="work">work</option>
+                        <option value="shopping">shopping</option>
+                        <option value="others">others</option>
+                        <option value="no tag" selected>no tag</option>
+                    </select> 
+                    <input type="text" [(ngModel)] = "label" name = "label" class = "form1 datain" placeholder="   Tags">        
                 </div>
                 <div class="kid">
                     <input type = "submit" class="add" value="Add">
@@ -38,12 +52,28 @@
 		
         </div>
 	
-    <div class = "divbody_one col-sm-3 scroller">
+    <div class = "divbody_one col-md-3 scroller">
         <div class = "divleftpanel">
             <div *ngFor = "let contact of contacts" class="bbt">
 				<br>
                 <div class = "divtitletab" (click) = "setcurid(contact._id)">
                     {{contact.first_name}}
+                    <div *ngIf = " ((contact.phone.split(' ')[2][0].toLowerCase()) <= 'h') && ((contact.phone.split(' ')[2][0].toLowerCase()) >= 'a')">
+                        <div class="labelton labelton_1">
+                            {{contact.phone.split(' ')[2]}}
+                        </div>
+                    </div>
+                    <div *ngIf = "((contact.phone.split(' ')[2][0].toLowerCase()) <= 't') && ((contact.phone.split(' ')[2][0].toLowerCase()) > 'h')">
+                        <div class="labelton labelton_2">
+                            {{contact.phone.split(' ')[2]}}
+                        </div>
+                    </div>
+                    <div *ngIf = "((contact.phone.split(' ')[2][0].toLowerCase()) <= 'z') && ((contact.phone.split(' ')[2][0].toLowerCase()) > 't')">
+                        <div class="labelton labelton_3">
+                            {{contact.phone.split(' ')[2]}}
+                        </div>
+                    </div>
+                    
                 </div>
 				
                 <div>
@@ -53,7 +83,7 @@
             </div>
         </div>
     </div>
-    <div class = "divbody_two col-sm-9 scroller">
+    <div class = "divbody_two col-md-9 scroller">
         <div *ngFor = "let contact of contacts">
             <div *ngIf = "contact._id == getcurid()">
                 <div class = "left_title">
@@ -69,6 +99,7 @@
                 <div class="left_phone">
                     {{contact.phone.split(' ')[1]}}
                 </div>
+                
             </div>
         </div>
     </div>

@@ -123,7 +123,7 @@
 
 .left_detail{
     font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-    width: 100%;
+    width: 80%;
 	font-size: 30px;
     margin-left: 20%;
 	text-align: match-parent;
@@ -154,4 +154,54 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+.tags_body{
+    margin-left: 70%;
+}
+
+.tags_form{
+    width: 1.4em;
+    background-color: blue;
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 2px;
+}
+
+option{
+    border:5px solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 3px;;
+}
+
+.labelton{
+    border:3px rgb(226, 114, 207) solid;
+    border-radius: 10px;
+    display: inline-block;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.labelton_1{
+    background-color: yellowgreen;
+}
+
+.labelton_2{
+    background-color: pink;
+}
+
+.labelton_3{
+    background-color: rgb(222, 184, 135);
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+  
+  .addtask{
+      width: 100%;
+    }
+  .kid{
+      width: 100%;
+  }
 }

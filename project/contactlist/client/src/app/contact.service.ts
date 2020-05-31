@@ -30,5 +30,4 @@ export class ContactService {
   {
     return this.http.delete('http://localhost:3000/api/contact/' + id).pipe(map(res => res.json()));
   }
-
 }
