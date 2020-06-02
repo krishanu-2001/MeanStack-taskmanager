@@ -5,12 +5,13 @@ var bodyparser = require('body-parser');
 var cors = require('cors');
 var path = require('path');
 
+
 var app = express();
 
 const route = require('./routes/route');
 
 //connect to mongodb
-mongoose.connect('mongodb://localhost:27017/ContactList');
+mongoose.connect('mongodb://localhost:27017/xx1');
 
 //on true connectior
 mongoose.connection.on('connected', ()=>{

@@ -2,6 +2,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 -->
 <script src="newcontactjs.js"></script>
+
 <div class = "divbase">
     <div>
         <div class = "head_one col-md-3 dark">
@@ -18,8 +19,7 @@
 		<svg style="height: 50px; width:60px;">
                         <circle cx="31" cy="25" r="23" stroke="blue" stroke-width="3" fill="blue" />
                         <text x="13" y="30" stroke="#ffffff" stroke-width="1.5">TASK</text>
-                    </svg>
--->
+                    </svg>-->
     <div class = "container addtask">
 		
 	<div class="kid addsub" >
@@ -54,40 +54,128 @@
 	</div>
     <div class = "divbody_one col-md-3 scroller">
         <div class = "divleftpanel">
-			
-            <div *ngFor = "let contact of contacts" class="bbt">
-				<br>
-                <div class = "divtitletab" (click) = "setcurid(contact._id)">
-                    {{contact.first_name}}
-                    <div *ngIf = " ((contact.phone.split(' ')[2][0].toLowerCase()) <= 'h') && ((contact.phone.split(' ')[2][0].toLowerCase()) >= 'a')">
-                        <div class="labelton labelton_1">
-                            {{contact.phone.split(' ')[2]}}
-                        </div>
-                    </div>
-                    <div *ngIf = "((contact.phone.split(' ')[2][0].toLowerCase()) <= 't') && ((contact.phone.split(' ')[2][0].toLowerCase()) > 'h')">
-                        <div class="labelton labelton_2">
-                            {{contact.phone.split(' ')[2]}}
-                        </div>
-                    </div>
-                    <div *ngIf = "((contact.phone.split(' ')[2][0].toLowerCase()) <= 'z') && ((contact.phone.split(' ')[2][0].toLowerCase()) > 't')">
-                        <div class="labelton labelton_3">
-                            {{contact.phone.split(' ')[2]}}
+
+            <div *ngFor = "let contact of contacts" class="bbt" >
+                <br>
+                <div *ngIf = "contact.completed[0] == '0' ">
+                    <div class="row">
+                        
+                        <div class = "divtitletab" (click) = "setcurid(contact._id)">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div>
+                                        {{contact.first_name}}
+                                    </div>
+                                    <div >
+                                        <div *ngIf = " ((contact.label[0].toLowerCase()) <= 'h') && ((contact.label[0].toLowerCase()) >= 'a')">
+                                            <div class="labelton labelton_1">
+                                                {{contact.label}}
+                                            </div>
+                                        </div>
+                                        <div *ngIf = "((contact.label[0].toLowerCase()) <= 't') && ((contact.label[0].toLowerCase()) > 'h')">
+                                            <div class="labelton labelton_2">
+                                                {{contact.label}}
+                                            </div>
+                                        </div>
+                                        <div *ngIf = "((contact.label[0].toLowerCase()) <= 'z') && ((contact.label[0].toLowerCase()) > 't')">
+                                            <div class="labelton labelton_3">
+                                                {{contact.label}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                     
+                    
+                    
+                    <div>
+                        <input class="deletebutton" type="button" (click) = "deleteContact(contact._id)" value="Delete" class = "divdelete">
+                    </div>
+                    <br>
                 </div>
-				
-                <div>
-                    <input class="deletebutton" type="button" (click) = "deleteContact(contact._id)" value="Delete" class = "divdelete">
-                </div>
-				<br>
             </div>
+            <hr >
+            note: will be restored next time you reload the page
+            <div *ngFor = "let contact of contacts" class="bbt" >
+                    <br>
+                    <div *ngIf = "contact.completed[0] != '0' ">
+                        <div class="row">
+                            
+                            <div class = "divtitletab"  (click) = "setcurid(contact._id)">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div *ngIf = "contact.completed[0] == '1' " style="background-color: darkcyan;">  
+                                            {{contact.first_name}}
+                                        </div>
+                                        <div *ngIf = "contact.completed[0] == '2' " style="background-color: red; text-decoration: line-through black;"> 
+                                            {{contact.first_name}}
+                                        </div>
+                                        <div *ngIf = "contact.completed[0] == '3' " style="background-color: darkorange;"> 
+                                            {{contact.first_name}}
+                                        </div>
+                                                    
+                                        <div >
+                                            <div *ngIf = " ((contact.label[0].toLowerCase()) <= 'h') && ((contact.label[0].toLowerCase()) >= 'a')">
+                                                <div class="labelton labelton_1">
+                                                    {{contact.label}}
+                                                </div>
+                                            </div>
+                                            <div *ngIf = "((contact.label[0].toLowerCase()) <= 't') && ((contact.label[0].toLowerCase()) > 'h')">
+                                                <div class="labelton labelton_2">
+                                                    {{contact.label}}
+                                                </div>
+                                            </div>
+                                            <div *ngIf = "((contact.label[0].toLowerCase()) <= 'z') && ((contact.label[0].toLowerCase()) > 't')">
+                                                <div class="labelton labelton_3">
+                                                    {{contact.label}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div>
+                            <!-- make a restore button here -->
+                        </div>
+                        <br>
+                    </div>
+                </div>
         </div>
     
 </div>		
     <div class = "divbody_two col-md-9 scroller">
         <div *ngFor = "let contact of contacts">
-            <div *ngIf = "contact._id == getcurid()">
+            <div *ngIf = "contact._id == getcurid()">  
+                <div class="col tabs_settings" >
+                        <img class="tabs_settings2" src="http://localhost:3000/ic_settings_black_18dp.png" alt="port not 3000" (click) = "toggleField()"  />
+                </div>
+                <div class="dropdown" id="dpd1" [class.dropdownon]="classToggled">
+                        Mark as:
+                        <div class="row" style="text-align: center; width: 100%; margin-left: 0.1em;">
+                            <div class="toy" style="text-align: center; background-color: darkcyan;" (click) = "setcompleted('1',contact._id)">
+                                done
+                            </div>
+                            <div class="toy" style="background-color: red;" (click) = "setcompleted('2',contact._id)">
+                                <i style="text-decoration: line-through black;">strike</i>
+                            </div>
+                            <div class="toy" style="text-align: center; background-color: darkorange;"(click) = "setcompleted('3',contact._id)">
+                                old
+                            </div>   
+                            <div *ngIf = "contact.completed[0] != '0' ">
+                                <div (click) = "setcompleted('0',contact._id)" style="background-color: rgb(27, 161, 27);">
+                                    restore
+                                </div>
+                            </div>
+                        </div>
+                </div> 
                 <div class = "left_title">
                     {{contact.first_name}}
                 </div>
@@ -96,14 +184,23 @@
                     {{contact.last_name}}
                 </div>
                 <div class="left_phone">
-                    {{contact.phone.split(' ')[0]}}
+                    {{contact.times.split(' ')[0]}}
                 </div>
                 <div class="left_phone">
-                    {{contact.phone.split(' ')[1]}}
+                    {{contact.times.split(' ')[1]}}
                 </div>
               </div>  
             </div>
         </div>
-	</div>
-		
 
+    </div>
+</div>
+
+<script>
+        function toggledisplay(){
+            alert("dknsdv");
+            var element = document.getElementById("dpd1");
+            element.classList.toggle("dropdownon");
+    
+        }
+    </script>
