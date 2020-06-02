@@ -1,9 +1,16 @@
 
 .divbase{
-    position: absolute;
-    background-color: #92EBEB;
+    position:absolute;
+	background-size:auto;
+	background-repeat:repeat-y;
     height: 100%;
-    width: 100%;
+    width:100%;
+	background: url("Images/bk.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	
 }
 
 .head_one{
@@ -19,31 +26,40 @@
 }
 
 .divbody_one{
-    position: relative;
-    background-color: #42BEF1;
+	position: relative;
+  background-color: rgba(255,255,255,0.5);
     color: white;
     float: left;
-    height: 100%;
+    height:53%;
 	border-radius:35px;
-}
+/*	box-shadow: 10px 10px 5px #aaaaaa;*/
+	width:25%;
+	margin:20px;
+	}
 
 .divbody_two{
 	border-radius:35px;
-    position: relative;
+    position:static;
     color: white;
-    background-color: #B44BE9;
-    float: left;
-    height: 100%;
+	background-color: rgba(255,255,255,0.5);
+/*	box-shadow: 10px 10px 5px #aaaaaa;*/
+    margin-right: 10px;
+    float: right;
+    height: 53%;
+	align-self: center;
+	width:65%;
+	margin:20px;
+	margin-left:5px;
 }
 
 .divheading{
     font-size: 2em;
-	border-radius:35px;
-    background-color: #5E95D5;
+	
+    background-color: rgba(255,255,255,0.5);
     color: white;
     text-align: center;
     width: 100%;
-    padding: 1em;
+	padding: 1em;
     font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 }
 
@@ -81,13 +97,16 @@
 
 .divtitletab{
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-    width: 100%;
-    background-color: #F688EE;
+/* <<<<<<< master */
+
+    background-color: rgba(0,0,0,0.5);;
+    width:100%;
     padding: 1em;
     margin-bottom: 0.5em;
     text-align: center;
 	border-radius:35px;
 }
+
 
 .divtitletab:active{
     border: 2px solid lightblue;
@@ -109,10 +128,27 @@
 .scroller{
     overflow: auto;
 }
+::-webkit-scrollbar {
+  width: 10px;
+	border-top-right-radius: 35px;
+}
+
+::-webkit-scrollbar-track {
+  background:linear-gradient(red,orange,yellow,green,indigo,violet) ;
+	  border-radius: 10px;
+	border: 0.5px solid black
+}
+::-webkit-scrollbar-thumb {
+  background:hsla(0,100%,99%,0.75);border-radius: 10px;
+	border: 0.5px solid black;
+}
 
 .addtask{
     color: black;
     padding: 10px;
+	
+	
+	
 }
 .addspan{
     float: left;
@@ -126,7 +162,7 @@
 	border-radius:35px;
     font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
     padding-right: 20px;
-	background-color: #50D4BF;
+	box-sizing:inherit;
 	padding: 1em;
 	text-align: center;
 	    font-size: 1em;
@@ -141,15 +177,17 @@
 	border-radius: 12px;
   text-decoration: none;
   display: inline-block;
+	text-align: center;
   font-size: 16px;
 }
 .addsub{
     float: left;
-    padding-left: 0px;
+	background-color: rgba(255,255,255,0.5);
+    padding-left: 25px;
     font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-	text-align: center;
+	box-sizing:inherit;
+	align: center;
 }
-
 .left_title{
     width: 100%;
     text-align: center;
@@ -197,7 +235,7 @@
 
 .tags_form{
     width: 1.4em;
-    background-color: blue;
+    background-color: rgb(0,0,0,0.5);
     color: white;
     border: 2px solid black;
     border-radius: 5px;
@@ -208,6 +246,7 @@ option{
     border:5px solid black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 3px;;
+	
 }
 
 .labelton{
@@ -220,14 +259,17 @@ option{
 
 .labelton_1{
     background-color: yellowgreen;
+	border:3px yellowgreen solid;
 }
 
 .labelton_2{
     background-color: pink;
+		border:3px pink solid;
 }
 
 .labelton_3{
     background-color: rgb(222, 184, 135);
+	border:3px rgb(222 , 184 ,135) solid;
 }
 
 

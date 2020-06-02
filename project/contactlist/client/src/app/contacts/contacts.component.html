@@ -5,56 +5,56 @@
 
 <div class = "divbase">
     <div>
-        <div class = "head_one col-md-3">
+        <div class = "head_one col-md-3 dark">
             
         </div>
         <div >
 			<p class = "divheading">
-			To Do Application<br>Task details</p>
+			To Do<br>Task details</p>
             </div>
-    </div>
+		
 	
 	    
-    <div class = "container addtask">
-	<div class="kid addsub">
-					<svg style="height: 50px; width:60px;">
+<!--
+		<svg style="height: 50px; width:60px;">
                         <circle cx="31" cy="25" r="23" stroke="blue" stroke-width="3" fill="blue" />
                         <text x="13" y="30" stroke="#ffffff" stroke-width="1.5">TASK</text>
-                    </svg>
-				</div>
-    	        
-            <form (submit) = "addContact()">
-				<div class="kid addsub">
-				        <input type="text" [(ngModel)] = "first_name" name = "first_name" class = "form1 datain" placeholder="     Title">        
-                </div>
-                <div class="kid addsub">
-                    <input type="text" [(ngModel)] = "last_name" name = "last_name" class = "form1 datain" placeholder="     Description" >        
-                </div>
-                <div class="kid addsub">
-                        <input type="date" [(ngModel)] = "date1" name = "times" class = "form1 datain" placeholder="dd-mm-yyyy" required> 
-                     &ensp;					
-					<input type="time" [(ngModel)] = "time" name = "times" class = "form1  datain" placeholder="time">        
-
-                </div>
-                <div class="kid addsub">
-                    <select id="label" name="label" class="tags_form" [(ngModel)] = "label">
-                        <option value="personal" >personal</option>
+                    </svg>-->
+    <div class = "container addtask">
+		
+	<div class="kid addsub" >
+		
+		
+		
+		    <form (submit) = "addContact()">
+				
+				        <input type="text" [(ngModel)] = "first_name" name = "first_name" class = "form1 datain" placeholder="  Task  Title">
+				        &nbsp; &nbsp;
+<input type="text" [(ngModel)] = "last_name" name = "last_name" class = "form1 datain" placeholder="   Task  Description" >
+&nbsp; 
+<input type="date" [(ngModel)] = "date1" name = "phone" class = "form1 datain" placeholder=" Due date (dd-mm-yyyy)" required> 
+&nbsp; &nbsp;
+<input type="time" [(ngModel)] = "time" name = "phone" class = "form1  datain" placeholder="time">
+&nbsp; &nbsp;
+<input type="text" [(ngModel)] = "label" name = "label" class = "form1 datain" placeholder="       Tags">
+				  
+<select id="label" name="label" class="tags_form" [(ngModel)] = "label">
+          <option value="personal" >personal</option>
                         <option value="work">work</option>
                         <option value="shopping">shopping</option>
                         <option value="others">others</option>
                         <option value="no tag" selected>no tag</option>
-                    </select> 
-                    <input type="text" [(ngModel)] = "label" name = "label" class = "form1 datain" placeholder="   Tags">        
-                </div>
-                <div class="kid">
-                    <input type = "submit" class="add" value="Add">
-                </div>
+                  </select>
+&nbsp;
+<input type = "submit" class="add" value="Add">
+                
             </form> 
-		
+		</div>
         </div>
-	
+	</div>
     <div class = "divbody_one col-md-3 scroller">
         <div class = "divleftpanel">
+
             <div *ngFor = "let contact of contacts" class="bbt" >
                 <br>
                 <div *ngIf = "contact.completed[0] == '0' ">
@@ -149,7 +149,8 @@
                     </div>
                 </div>
         </div>
-    </div>
+    
+</div>		
     <div class = "divbody_two col-md-9 scroller">
         <div *ngFor = "let contact of contacts">
             <div *ngIf = "contact._id == getcurid()">  
@@ -188,9 +189,10 @@
                 <div class="left_phone">
                     {{contact.times.split(' ')[1]}}
                 </div>
-                
+              </div>  
             </div>
         </div>
+
     </div>
 </div>
 
