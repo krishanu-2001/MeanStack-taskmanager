@@ -56,9 +56,32 @@
     margin-bottom: 0px;
 }
 
+.dropdown{
+    border: 2px black solid;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    
+    width: 10em;
+    height: 6em;
+
+}
+
+.dropdownon{
+    display: none;
+}
+
+.toy{
+    display: inline-block;
+    width: 33%;
+    height: 3em;
+    padding: 0px;
+    text-align: center;
+    margin: 0px;
+}
+
 .divtitletab{
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-
+    width: 100%;
     background-color: #F688EE;
     padding: 1em;
     margin-bottom: 0.5em;
@@ -68,6 +91,19 @@
 
 .divtitletab:active{
     border: 2px solid lightblue;
+}
+
+.tabs_settings{
+    width: 0px;
+    border: 0px;
+    background-color: none;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 0px;
+    text-align: center;
+}
+.tabs_settings2:active{
+    border: 1px lightblue solid;
 }
 
 .scroller{

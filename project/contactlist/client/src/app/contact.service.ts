@@ -30,4 +30,11 @@ export class ContactService {
   {
     return this.http.delete('http://localhost:3000/api/contact/' + id).pipe(map(res => res.json()));
   }
+
+  //update
+  updateContact(id, newContact)
+  {
+    return this.http.put('http://localhost:3000/api/contact/' + id, newContact).pipe(map(res => res.json()));
+  }
+
 }

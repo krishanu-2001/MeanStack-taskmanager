@@ -12,9 +12,19 @@ const ContactSchema = mongoose.Schema({
         require: true
 
     },
-    phone:{
+    times:{
         type: String,
         require: true
+
+    },
+    label:{
+        type: String,
+        require: true
+
+    },
+    completed:{
+        type: String,
+        require: false
 
     },
         
