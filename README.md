@@ -42,7 +42,9 @@ team - BothEnds
       ng serve (--port "...", if required)
       
  voila! It's on!
-
+  
+    
+<hr>
 ## Some helpful commands  
 Updating the angular node version  
 To update the angular node version, run the following commands in your terminal.
