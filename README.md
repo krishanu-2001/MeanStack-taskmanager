@@ -38,8 +38,24 @@ team - BothEnds
 <hr>  
 
 ## Some helpful commands  
-Updating the angular node version  
-To update the angular node version, run the following commands in your terminal.
+
+
+To install mongodb:
+  
+             install mongodb MSI installer from [https://www.mongodb.com/download-center/community?tck=docs_server]
+             install with default settings  
+             then open cmd
+             $ cd C:\  
+             $ mkdir data
+             $ cd data
+             $ mkdir db
+             $ cd db 
+             $ "C:\Program Files\MongoDB\Server\4.2\bin\mongod.exe" --dbpath="c:\data\db"  
+             
+To install node js:  
+
+            install from here [https://nodejs.org/en/download/]              
+            install with default settings
 
 To update angular-CLI package:  
 
@@ -49,5 +65,5 @@ To update angular-CLI package:
 To update the local project version:  
 
              npm outdated
-             npm upgrade
- 
+             npm upgrade               
+
