@@ -46,7 +46,8 @@ team - BothEnds
   
 <br>
 <br>
-<hr>
+<hr>  
+
 ## Some helpful commands  
 Updating the angular node version  
 To update the angular node version, run the following commands in your terminal.
