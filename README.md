@@ -5,21 +5,10 @@ team - BothEnds
 
 # Prerequisites  
       mongoDB configured on your system
-      npm v-6.9.0(pls check compatibility)
-      Angular CLI: 8.3.21(pls check compatibility)
-      Node: 10.16.3
+      Angular CLI: 9.1.7(pls check compatibility)
+      Node: 12.17.1
+      Npm: 6.14.4 
       OS: win32 x64
-      Angular:
-      ...
-
-      Package                      Version
-      ------------------------------------------------------
-      @angular-devkit/architect    0.803.21
-      @angular-devkit/core         8.3.21
-      @angular-devkit/schematics   8.3.21
-      @schematics/angular          8.3.21
-      @schematics/update           0.803.21
-      rxjs                         6.4.0
 
 #  Steps To Run  
 
