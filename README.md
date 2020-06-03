@@ -43,16 +43,19 @@ team - BothEnds
       
  voila! It's on!
 
-# Updating the angular node version
+## Some helpful commands  
+Updating the angular node version  
 To update the angular node version, run the following commands in your terminal.
 
- To update angular-CLI package:
- npm uninstall -g angular-cli
- npm install -g @angular/cli@latest
- 
- To update the local project version:
- rm -rf node_modules
- npm uninstall --save-dev angular-cli
- npm install --save-dev @angular/cli@latest
- npm install
+To update angular-CLI package:  
+
+             npm uninstall -g angular-cli  
+             npm install -g @angular/cli@latest
+
+To update the local project version:  
+
+             rm -rf node_modules(optional)  
+             npm uninstall --save-dev angular-cli  
+             npm install --save-dev @angular/cli@latest  
+             npm install
  
