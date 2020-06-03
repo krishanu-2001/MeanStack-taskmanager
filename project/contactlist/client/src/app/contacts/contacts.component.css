@@ -1,9 +1,16 @@
 
 .divbase{
-    position: absolute;
-    background-color: #92EBEB;
+    position:absolute;
+	background-size:auto;
+	background-repeat:repeat-y;
     height: 100%;
-    width: 100%;
+    width:100%;
+	background: url("../../../../public/bk.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	
 }
 
 .head_one{
@@ -19,31 +26,41 @@
 }
 
 .divbody_one{
-    position: relative;
-    background-color: #42BEF1;
+	position: relative;
+  background-color: rgba(255,255,255,0.5);
     color: white;
     float: left;
-    height: 100%;
+    height:53%;
 	border-radius:35px;
-}
+/*	box-shadow: 10px 10px 5px #aaaaaa;*/
+	width:25%;
+	margin:20px;
+	}
 
 .divbody_two{
 	border-radius:35px;
-    position: relative;
-    color: white;
-    background-color: #B44BE9;
-    float: left;
-    height: 100%;
+    position:static;
+    color:white;
+	text-emphasis:bold;
+	background-color: rgba(255,255,255,0.5);
+/*	box-shadow: 10px 10px 5px #aaaaaa;*/
+    margin-right: 10px;
+    float: right;
+    height: 53%;
+	align-self: center;
+	width:65%;
+	margin:20px;
+	margin-left:5px;
 }
 
 .divheading{
     font-size: 2em;
-	border-radius:35px;
-    background-color: #5E95D5;
+	
+    background-color: rgba(255,255,255,0.5);
     color: white;
     text-align: center;
     width: 100%;
-    padding: 1em;
+	padding: 1em;
     font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 }
 
@@ -81,13 +98,14 @@
 
 .divtitletab{
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-    width: 100%;
-    background-color: #F688EE;
+    background-color: rgba(0,0,0,0.5);;
     padding: 1em;
     margin-bottom: 0.5em;
     text-align: center;
 	border-radius:35px;
+	width:100%;
 }
+
 
 .divtitletab:active{
     border: 2px solid lightblue;
@@ -109,6 +127,21 @@
 .scroller{
     overflow: auto;
 }
+::-webkit-scrollbar {
+  width: 10px;
+	border-top-right-radius: 35px;
+}
+
+::-webkit-scrollbar-track {
+  background:linear-gradient(red,orange,yellow,green,indigo,violet) ;
+	  border-radius: 10px;
+	border: 0.5px solid black
+}
+::-webkit-scrollbar-thumb {
+  background:hsla(0,100%,99%,0.75);border-radius: 10px;
+	border: 0.5px solid black;
+}
+
 
 .addtask{
     color: black;
@@ -126,8 +159,9 @@
 	border-radius:35px;
     font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
     padding-right: 20px;
-	background-color: #50D4BF;
+	background-color: rgba(255,255,255,0.5);
 	padding: 1em;
+	margin-left:2px;
 	text-align: center;
 	    font-size: 1em;
     
@@ -148,6 +182,7 @@
     padding-left: 0px;
     font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 	text-align: center;
+	margin-left:5px;
 }
 
 .left_title{
