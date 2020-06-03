@@ -54,8 +54,6 @@ To update angular-CLI package:
 
 To update the local project version:  
 
-             rm -rf node_modules(optional)  
-             npm uninstall --save-dev angular-cli  
-             npm install --save-dev @angular/cli@latest  
-             npm install
+             npm outdated
+             npm upgrade
  
