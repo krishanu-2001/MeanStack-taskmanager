@@ -79,7 +79,7 @@
     border-radius: 5px;
     
     width: 10em;
-    height: 6em;
+    height: 8em;
 
 }
 
@@ -94,6 +94,10 @@
     padding: 0px;
     text-align: center;
     margin: 0px;
+}
+
+.toy:hover{
+    border: 1px lightblue solid;
 }
 
 .divtitletab{
@@ -128,13 +132,13 @@
     overflow: auto;
 }
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 	border-top-right-radius: 35px;
 }
 
 ::-webkit-scrollbar-track {
-  background:linear-gradient(red,orange,yellow,green,indigo,violet) ;
-	  border-radius: 10px;
+    background:linear-gradient(red,orange,yellow,green,indigo,violet) ;
+	border-radius: 10px;
 	border: 0.5px solid black
 }
 ::-webkit-scrollbar-thumb {
@@ -267,12 +271,70 @@ option{
 
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px), screen and (max-height: 600px) {
   
   .addtask{
       width: 100%;
     }
   .kid{
       width: 100%;
+  }
+  
+  .left_title{
+    width: 100%;
+    text-align: center;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    font-size: 2em;
+    color: white;
+  }
+
+  .left_detail{
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    width: 80%;
+	font-size: 30px;
+    margin-left: 20%;
+    color: white;
+	text-align: match-parent;
+  }
+
+  .divbody_two{
+    border-radius:35px;
+    position:static;
+    color:white;
+	text-emphasis:bold;
+	background-color: rgba(31, 29, 29, 0.5);
+/*	box-shadow: 10px 10px 5px #aaaaaa;*/
+    margin-right: 10px;
+    float: right;
+    height: 53%;
+	align-self: center;
+	width:90%;
+	margin:20px;
+	margin-left:5px;
+  }
+
+  .divbody_one{
+	position: relative;
+  background-color: rgba(255,255,255,0.5);
+    color: white;
+    float: left;
+    height:30%;
+	border-radius:35px;
+/*	box-shadow: 10px 10px 5px #aaaaaa;*/
+	width:80%;
+	margin:20px;
+	}
+
+  .divbase{
+    position:absolute;
+	background-size:auto;
+	background-repeat:repeat-y;
+    height: 300%;
+    width:100%;
+	background: url("../../../../public/bk.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   }
 }
