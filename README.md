@@ -42,8 +42,10 @@ team - BothEnds
       ng serve (--port "...", if required)
       
  voila! It's on!
+ go to localhost:4200
   
-    
+<br>
+<br>
 <hr>
 ## Some helpful commands  
 Updating the angular node version  
