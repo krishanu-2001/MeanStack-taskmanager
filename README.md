@@ -42,7 +42,7 @@ team - BothEnds
 
 To install mongodb:
   
-             install mongodb MSI installer from [https://www.mongodb.com/download-center/community?tck=docs_server]
+             install mongodb MSI installer from https://www.mongodb.com/download-center/community?tck=docs_server
              install with default settings  
              then open cmd
              $ cd C:\  
@@ -54,7 +54,7 @@ To install mongodb:
              
 To install node js:  
 
-            install from here [https://nodejs.org/en/download/]              
+            install from here https://nodejs.org/en/download/             
             install with default settings
 
 To update angular-CLI package:  
