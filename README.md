@@ -65,5 +65,10 @@ To update angular-CLI package:
 To update the local project version:  
 
              npm outdated
-             npm upgrade               
+             npm upgrade     
+               
+Using Ngrok:  for demos
+
+             cmd1 just ng serve 
+             cmd2 ngrok http 4200 -host-header="localhost:4200"
 
