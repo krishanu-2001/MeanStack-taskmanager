@@ -3,6 +3,8 @@ Made for hackerearth hackathon
 team - BothEnds
 <hr>  
 
+![altimage1.png](https://github.com/krishanu-2001/MeanStack-taskmanager/blob/master/photo/p2_allfeatures.png)
+
 # Prerequisites  
       mongoDB configured on your system
       Angular CLI: 9.1.7(pls check compatibility)
